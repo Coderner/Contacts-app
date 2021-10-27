@@ -1,17 +1,19 @@
 import React from "react";
-import contactimage from "./contactimage.png";
+import ContactImage from "./contactimage.png";
 
 const ContactCard = (props) => {
 console.log(props);
    const {name, email}= props.contact;
    return(
     <div className="item">
-        <div className="user image" src={contactimage} alt="user" />
+        <img className="ui avatar image" src={ContactImage} alt="user" />
         <div className="content">
             <div className="header">{name}</div>
             <div>{email}</div>
          </div>
-        <i className="trash alternate outline icon" style={{ color:"red", marginTop:"7px"}}></i>
+         <i className="trash alternate outline icon" 
+         style={{ color:"red"}}
+         ></i>
    </div>
    );
 };
