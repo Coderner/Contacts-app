@@ -3,7 +3,7 @@ import ContactImage from "./contactimage.png";
 
 const ContactCard = (props) => {
 console.log(props);
-   const {name, email}= props.contact;
+   const {name, email, id}= props.contact;
    return(
     <div className="item">
         <img className="ui avatar image" src={ContactImage} alt="user" />
@@ -13,6 +13,7 @@ console.log(props);
          </div>
          <i className="trash alternate outline icon" 
          style={{ color:"red"}}
+         onClick={() => props.clickHandler(id)}
          ></i>
    </div>
    );
